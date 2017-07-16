@@ -7,7 +7,7 @@ import me.kirkscope.game.tilemap.TileMap
  * Created by Kirk on 7/15/17.
  */
 class Diamond(tileMap: TileMap): Entity(tileMap) {
-    private val tileChanges: MutableList<IntArray> = mutableListOf()
+    val tileChanges: MutableList<IntArray> = mutableListOf()
 
     init {
         animation.frames = Content.DIAMOND[0]

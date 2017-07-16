@@ -3,7 +3,6 @@ package me.kirkscope.game.entity
 import me.kirkscope.game.manager.Content
 import me.kirkscope.game.manager.JukeBox
 import me.kirkscope.game.tilemap.TileMap
-import java.awt.image.BufferedImage
 
 /**
  * Created by Kirk on 7/15/17.
@@ -29,6 +28,10 @@ class Player(tileMap: TileMap): Entity(tileMap) {
           animation.frames = Content.PLAYER[value]
           animation.delay = 10
       }
+
+    init {
+        currentAnimation = 0
+    }
 
     var ticks = 0L
     var onWater = false

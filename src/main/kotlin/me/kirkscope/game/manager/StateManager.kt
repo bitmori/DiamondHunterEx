@@ -33,10 +33,6 @@ class StateManager {
         else -> GameOverState(this)
     }
 
-    init {
-        JukeBox.init()
-    }
-
     fun update() {
         if (paused) {
             pauseState.update()

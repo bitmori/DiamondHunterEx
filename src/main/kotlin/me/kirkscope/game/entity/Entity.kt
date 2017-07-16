@@ -14,8 +14,8 @@ enum class Direction {
 
 abstract class Entity(val tileMap: TileMap) {
     protected val animation: Animation = Animation()
-    protected var x = 0
-    protected var y = 0
+    var x = 0
+    var y = 0
     protected var xDest = 0
     protected var yDest = 0
     protected var isMoving = false
@@ -23,12 +23,13 @@ abstract class Entity(val tileMap: TileMap) {
     protected var colTile = 0
     protected open var speed = 0
 
+    var valid = true
     var width = 16
     var height = 16
     val cwidth = 12
     val cheight = 12
 
-    protected var direction = Direction.LEFT
+    var direction = Direction.LEFT
         set(dir) {
             if (!isMoving) {
                 field = dir

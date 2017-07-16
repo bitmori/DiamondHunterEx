@@ -32,8 +32,7 @@ object Content {
     }
 
     fun drawString(gr: Graphics2D, str: String, x: Int, y: Int) {
-        val content = str.toUpperCase()
-        for ((i, c) in str.withIndex()) {
+        for ((i, c) in str.toUpperCase().withIndex()) {
             val ch = when (c.toInt()) {
                 47 -> 36 // slash
                 58 -> 37 // colon
